@@ -8,3 +8,5 @@ add_executable(1523
 
 add_executable(1491
         "1491. Average Salary Excluding the Minimum and Maximum Salary.c")
+add_executable(0704
+        "0704. Binary Search.c")
