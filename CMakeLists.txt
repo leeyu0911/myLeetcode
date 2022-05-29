@@ -10,3 +10,5 @@ add_executable(1491
         "1491. Average Salary Excluding the Minimum and Maximum Salary.c")
 add_executable(0704
         "0704. Binary Search.c")
+add_executable(374
+        "374. Guess Number Higher or Lower.c")
