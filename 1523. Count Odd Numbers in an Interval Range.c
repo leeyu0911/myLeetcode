@@ -6,24 +6,8 @@
 
 
 int countOdds(int low, int high){
-    if (low == high) {
-        if (low % 2 == 0) return 0;
-        else return 1;
-    }
-
-    int count = 1;
-    int num = low;
-    if (low % 2 == 0) {
-        ++num;
-    }
-
-    num = num + 2;
-    while (num <= high) {
-        num = num + 2;
-        ++count;
-    }
-
-    return count;
+    if (low % 2 == 0 && high % 2 ==0) return (high - low) / 2;
+    else return (high - low) / 2 + 1;
 }
 
 int main() {
