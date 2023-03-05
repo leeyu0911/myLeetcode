@@ -2,9 +2,13 @@
 // Created by leeyu on 2023/3/5.
 //
 #include <stdio.h>
-#define bool int
-#define true 1
-#define false 0
+//#define bool int
+//#define true 1
+//#define false 0
+
+typedef enum {
+    true = 1, false = 0
+}bool;
 
 
 struct ListNode {
