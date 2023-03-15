@@ -1,0 +1,14 @@
+//
+// Created by leeyu on 2023/3/15.
+//
+int removeElement(int* nums, int numsSize, int val){
+    int count = 0;
+    for (int i = 0; i < numsSize; ++i) {
+        if (nums[i] == val) {
+            count++;
+        } else {
+            nums[i - count] = nums[i];
+        }
+    }
+    return numsSize - count;
+}
