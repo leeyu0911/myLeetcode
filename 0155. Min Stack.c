@@ -7,11 +7,11 @@
 typedef struct {
     int *stack;
     int *min;
-} Pare;
+} Pair;
 
 typedef struct {
     //Methods pop, top and getMin operations will always be called on non-empty stacks.
-    Pare *pareStack;
+    Pair *pareStack;
     int top;
     int size;
 } MinStack;
@@ -23,7 +23,7 @@ void errHandler() {
 MinStack* minStackCreate() {
     int size = 4;
     MinStack *minStack = (MinStack*)malloc(sizeof(MinStack));
-    minStack->pareStack = (Pare*) malloc(sizeof(Pare));
+    minStack->pareStack = (Pair*) malloc(sizeof(Pair));
     minStack->pareStack->stack = calloc(size, sizeof(int));
     minStack->pareStack->min = calloc(size, sizeof(int));
     minStack->size = size;
