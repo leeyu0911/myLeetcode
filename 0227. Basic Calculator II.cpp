@@ -11,7 +11,7 @@ public:
     int calculate(string s) {
         if (s.length() == 0 ) return 0;
 
-        int pre_sum = 0;
+        int sum = 0;
         int the_num = 0;
         int pre_num = 0;
         char sign = '+';
@@ -25,11 +25,11 @@ public:
             if (!isdigit(c) && !iswspace(c) || i == s.length() - 1) {
                 switch (sign) {
                     case '+':
-                        pre_sum += pre_num;
+                        sum += pre_num;
                         pre_num = the_num;
                         break;
                     case '-':
-                        pre_sum += pre_num;
+                        sum += pre_num;
                         pre_num = -the_num;  // fix the last sigh is subtraction
                         break;
                     case '*':
@@ -44,7 +44,7 @@ public:
             }
         }
 
-        return pre_sum + pre_num;
+        return sum + pre_num;
     }
 };
 
